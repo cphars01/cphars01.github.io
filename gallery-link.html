@@ -2,15 +2,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif; }
 
-#myImg3 {
+
+    
+#myImg1 {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-#myImg3:hover {opacity: 0.7;}
+#myImg1:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -24,7 +26,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgba(0,0,0,.95); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -33,7 +35,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
   display: block;
   width: 100%;
   max-width: 1080px;
+  z-index: 3;
 }
+    
 .modal-backdrop
 {
     opacity:0 !important;
@@ -94,37 +98,40 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 100%;
   }
 }
+
+
+    
 </style>
 </head>
 <body>
 
 <!-- Trigger/Open The Modal -->
 <center>
-<a href="#"><img id="myBtn1" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true"></a>
+<a href="#"><img id="myBtn1" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true" id="myImg1"></a>
 </center>
  
 <center>
-<a href="#"><img id="myBtn2" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true"></a>
+<a href="#"><img id="myBtn2" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true" id="myImg1"></a>
 </center>
 
 <center>
-<a href="#"><img id="myBtn3" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true"></a>
+<a href="#"><img id="myBtn3" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true" id="myImg1"></a>
 </center>
 
 <center>
-<a href="#"><img id="myBtn4" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true"></a>
+<a href="#"><img id="myBtn4" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true" id="myImg1"></a>
 </center>
 
 <center>
-<a href="#"><img id="myBtn5" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true"></a>
+<a href="#"><img id="myBtn5" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true" id="myImg1"></a>
 </center>
 
 <center>
-<a href="#"><img id="myBtn6" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true"></a>
+<a href="#"><img id="myBtn6" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true" id="myImg1"></a>
 </center>
 
 <center>
-<a href="#"><img id="myBtn7" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true"></a>
+<a href="#"><img id="myBtn7" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true" id="myImg1"></a>
 </center>
 
 
@@ -133,7 +140,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <!-- Odalisque -->
 <div id="myModal1" class="modal">
   <span class="close" id="close1">&times;</span>
-  <img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/odalisque-INSTA.png?raw=true" id="img03">
+  <img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/odalisque-INSTA.png?raw=true" >
   <div id="2022"></div>
 </div>
 
@@ -147,37 +154,37 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <!-- Pleasure -->
 <div id="myModal3" class="modal">
   <span class="close" id="close3">&times;</span>
-   <img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true" id="img03">
+   <img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true" >
   <div id="2022"></div>
 </div>
     
 <!-- Death -->
 <center>
 <div id="myModal4" class="modal">
-  <span class="close" id="close4">&times;</span>
- <iframe src="https://streamable.com/e/q7ekqs?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
-  <div id="2022"></div>
+<span class="close" id="close4">&times;</span>
+<iframe class="modal-content" src="https://streamable.com/e/hfjj4m?autoplay=1&nocontrols=1" width="608" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+
 </div>
 </center>
     
 <!-- Eternal -->
 <div id="myModal5" class="modal">
   <span class="close" id="close5">&times;</span>
-  <iframe class="modal-content" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+  <iframe class="modal-content" src="https://streamable.com/e/0bqnzu?autoplay=1&nocontrols=1" width="675" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
   <div id="caption2"></div>
 </div>
     
 <!-- Dungeon -->
 <div id="myModal6" class="modal">
   <span class="close" id="close6">&times;</span>
-  <iframe class="modal-content" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+  <iframe class="modal-content" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
   <div id="caption2"></div>
 </div>
     
 <!-- Communion -->
 <div id="myModal7" class="modal">
   <span class="close" id="close7">&times;</span>
-  <iframe class="modal-content" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+  <iframe class="modal-content" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
   <div id="caption2"></div>
 </div>
 
@@ -240,61 +247,76 @@ btn7.onclick = function() {
 
 // When the user clicks on <span> (x), close the modal
 span1.onclick = function() {
-  modal1.style.display = "none";
+modal1.style.display = "none";
+document.getElementById('myBtn1').scrollIntoView();
 }
 
 span2.onclick = function() {
-  modal2.style.display = "none";
+modal2.style.display = "none";
+document.getElementById('myBtn2').scrollIntoView();
 }
 
 span3.onclick = function() {
-  modal3.style.display = "none";
+modal3.style.display = "none";
+document.getElementById('myBtn3').scrollIntoView();
 }
 
+    
 span4.onclick = function() {
-  modal4.style.display = "none";
+modal4.style.display = "none";
+document.getElementById('myBtn4').scrollIntoView();
 }
 
 span5.onclick = function() {
-  modal5.style.display = "none";
+modal5.style.display = "none";
+document.getElementById('myBtn5').scrollIntoView();
 }
 
 span6.onclick = function() {
-  modal6.style.display = "none";
+modal6.style.display = "none";
+document.getElementById('myBtn6').scrollIntoView();
 }
 
 span7.onclick = function() {
-  modal7.style.display = "none";
+modal7.style.display = "none";
+document.getElementById('myBtn7').scrollIntoView();
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal1) {
     modal1.style.display = "none";
+    document.getElementById('myBtn1').scrollIntoView();
   }
   
   if (event.target == modal2) {
     modal2.style.display = "none";
+    document.getElementById('myBtn2').scrollIntoView();
   }
 
 if (event.target == modal3) {
     modal3.style.display = "none";
+    document.getElementById('myBtn3').scrollIntoView();
   }
 
 if (event.target == modal4) {
     modal4.style.display = "none";
+    document.getElementById('myBtn4').scrollIntoView();
   }
 
 if (event.target == modal5) {
     modal5.style.display = "none";
+    document.getElementById('myBtn5').scrollIntoView();
   }
 
 if (event.target == modal6) {
     modal6.style.display = "none";
+    document.getElementById('myBtn6').scrollIntoView();
   }
 
 if (event.target == modal7) {
     modal7.style.display = "none";
+    document.getElementById('myBtn7').scrollIntoView();
   }
 }
 </script>
