@@ -1,0 +1,168 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
+    
+#myBtn1 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#myBtn1:hover {opacity:50%}
+    
+li{
+    height:40vw;
+    width:auto;
+    float:left;
+}
+.inner{
+    width:123vw;
+}
+.outer{
+    width:100vw;
+    overflow-x:auto;
+}
+    
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 1px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,1); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+ margin: auto;
+  display: block;
+  max-height: 100%; 
+  z-index: 3;
+}
+    
+.modal-backdrop
+{
+    opacity:0 !important;
+    position: fixed !important;
+    z-index: 0 !important;
+}
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 2px 0;
+  height: 2px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+      height: auto;
+  }
+}
+</style>
+
+
+
+
+
+<div class="inner">
+    <ul>          
+        <li>
+        <a href="#"><img id="myBtn1" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true" height="100%" width="auto"></a>
+        </li>
+
+        <li>
+        <a href="#"><img id="myBtn2" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true" height="100%" width="auto"></a>
+        </li>
+        
+        <li>
+        <a href="#"><img id="myBtn3" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true" height="100%" width="auto"></a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="inner">
+    <ul>          
+        <li>
+        <img class="halfscale" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-2.png?raw=true" style="width:720px">
+        </li>
+
+        <li>
+        <a href="#"><img id="myBtn7" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true" height="100%" width="auto"></a>
+        </li>
+        
+         <li>
+        <img class="halfscale" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-1.png?raw=true" style="width:720px">
+        </li>
+    </ul>
+</div>
+
+
+    
+
+<div class="inner">
+    <ul>
+        <li>
+        <a href="#"><img id="myBtn4" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true" height="100%" width="auto"></a>
+        </li>
+        
+        <li>
+        <a href="#"><img id="myBtn5" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true" height="100%" width="auto"> </a>
+        </li>
+
+        <li>
+        <a href="#"><img id="myBtn6" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true" height="100%" width="auto"></a>
+        </li>
+    </ul>    
+</div>
