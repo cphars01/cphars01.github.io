@@ -12,18 +12,22 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
 
 #myBtn1:hover {opacity:50%}
     
-li{
-    height:40vw;
+.li_images{
+    height:50vw;
     width:auto;
     float:left;
 }
+
+.li_txt{
+    height:100px;
+    width:auto;
+    float:left;
+}
+    
 .inner{
-    width:123vw;
+    width:97vw;
 }
-.outer{
-    width:100vw;
-    overflow-x:auto;
-}
+
     
 /* The Modal (background) */
 .modal {
@@ -102,13 +106,14 @@ li{
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
+/* 100% Image Width on Smaller Screens 
 @media only screen and (max-width: 700px){
   .modal-content {
     width: 100%;
       height: auto;
   }
-}
+}*/
+    
 </style>
 
 
@@ -117,16 +122,16 @@ li{
 
 <div class="inner">
     <ul>          
-        <li>
-        <a href="#"><img id="myBtn1" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true" height="100%" width="auto"></a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn1" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true" height="60%" width="auto"></a>
         </li>
 
-        <li>
-        <a href="#"><img id="myBtn2" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true" height="100%" width="auto"></a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn2" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true" height="60%" width="auto"></a>
         </li>
         
-        <li>
-        <a href="#"><img id="myBtn3" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true" height="100%" width="auto"></a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn3" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true" height="60%" width="auto"></a>
         </li>
     </ul>
 </div>
@@ -134,16 +139,32 @@ li{
 
 <div class="inner">
     <ul>          
-        <li>
-        <img class="halfscale" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-2.png?raw=true" style="width:720px">
+        <li class="li_txt">
+<center>0</center>
         </li>
 
-        <li>
-        <a href="#"><img id="myBtn7" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true" height="100%" width="auto"></a>
+        <li class="li_txt">
+1
         </li>
         
-         <li>
-        <img class="halfscale" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-1.png?raw=true" style="width:720px">
+        <li class="li_txt">
+2
+        </li>
+    </ul>
+</div>
+
+<div class="inner">
+    <ul>          
+        <li class="li_images">
+        <img src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-2.png?raw=true" height="60%" width="auto">
+        </li>
+
+        <li class="li_images">
+        <a href="#"><img id="myBtn7" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true" height="60%" width="auto"></a>
+        </li>
+        
+        <li class="li_images">
+        <img src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-1.png?raw=true" height="60%" width="auto">
         </li>
     </ul>
 </div>
@@ -153,16 +174,192 @@ li{
 
 <div class="inner">
     <ul>
-        <li>
-        <a href="#"><img id="myBtn4" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true" height="100%" width="auto"></a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn4" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true" height="60%" width="auto"></a>
         </li>
         
-        <li>
-        <a href="#"><img id="myBtn5" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true" height="100%" width="auto"> </a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn5" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true" height="60%" width="auto"> </a>
         </li>
 
-        <li>
-        <a href="#"><img id="myBtn6" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true" height="100%" width="auto"></a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn6" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true" height="60%" width="auto"></a>
         </li>
     </ul>    
 </div>
+
+<!-- Odalisque -->
+<div id="myModal1" class="modal">   
+<span class="close" id="close1">&times;</span>
+<img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/odalisque-INSTA.png?raw=true">
+</div>
+
+<!-- Pull -->
+<div id="myModal2" class="modal">   
+<span class="close" id="close2">&times;</span>      
+<iframe class="modal-content" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="1080" height="1080" allowfullscreen allow="autoplay"></iframe>
+</div>
+    
+<!-- Pleasure -->
+<div id="myModal3" class="modal">   
+<span class="close" id="close3">&times;</span>       
+<img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true" >
+</div>
+    
+<!-- Death -->
+
+<div id="myModal4" class="modal">
+<span class="close" id="close4">&times;</span>
+<iframe class="modal-content" src="https://streamable.com/e/hfjj4m?autoplay=1&nocontrols=1" width="608" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+</div>
+
+<!-- Eternal -->
+<div id="myModal5" class="modal">
+<span class="close" id="close5">&times;</span> 
+<iframe class="modal-content" src="https://streamable.com/e/0bqnzu?autoplay=1&nocontrols=1" width="675" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+</div>
+    
+<!-- Dungeon -->
+<div id="myModal6" class="modal">
+<span class="close" id="close6">&times;</span>
+<iframe class="modal-content" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+</div>
+    
+<!-- Communion -->
+<div id="myModal7" class="modal">
+<span class="close" id="close7">&times;</span>
+<iframe class="modal-content" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+</div>
+
+<script>
+// Get the modal
+var modal1 = document.getElementById("myModal1"); 
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+var modal4 = document.getElementById("myModal4");
+var modal5 = document.getElementById("myModal5");
+var modal6 = document.getElementById("myModal6");
+var modal7 = document.getElementById("myModal7");
+    
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+var btn5 = document.getElementById("myBtn5");
+var btn6 = document.getElementById("myBtn6");
+var btn7 = document.getElementById("myBtn7");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementById("close1");
+var span2 = document.getElementById("close2");
+var span3 = document.getElementById("close3");
+var span4 = document.getElementById("close4");
+var span5 = document.getElementById("close5");
+var span6 = document.getElementById("close6");
+var span7 = document.getElementById("close7");
+
+// When the user clicks the button, open the modal 
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+btn4.onclick = function() {
+  modal4.style.display = "block";
+}
+
+btn5.onclick = function() {
+  modal5.style.display = "block";
+}
+
+btn6.onclick = function() {
+  modal6.style.display = "block";
+}
+
+btn7.onclick = function() {
+  modal7.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+modal1.style.display = "none";
+document.getElementById('myBtn1').scrollIntoView();
+}
+
+span2.onclick = function() {
+modal2.style.display = "none";
+document.getElementById('myBtn2').scrollIntoView();
+}
+
+span3.onclick = function() {
+modal3.style.display = "none";
+document.getElementById('myBtn3').scrollIntoView();
+}
+
+    
+span4.onclick = function() {
+modal4.style.display = "none";
+document.getElementById('myBtn4').scrollIntoView();
+}
+
+span5.onclick = function() {
+modal5.style.display = "none";
+document.getElementById('myBtn5').scrollIntoView();
+}
+
+span6.onclick = function() {
+modal6.style.display = "none";
+document.getElementById('myBtn6').scrollIntoView();
+}
+
+span7.onclick = function() {
+modal7.style.display = "none";
+document.getElementById('myBtn7').scrollIntoView();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+    document.getElementById('myBtn1').scrollIntoView();
+  }
+  
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+    document.getElementById('myBtn2').scrollIntoView();
+  }
+
+if (event.target == modal3) {
+    modal3.style.display = "none";
+    document.getElementById('myBtn3').scrollIntoView();
+  }
+
+if (event.target == modal4) {
+    modal4.style.display = "none";
+    document.getElementById('myBtn4').scrollIntoView();
+  }
+
+if (event.target == modal5) {
+    modal5.style.display = "none";
+    document.getElementById('myBtn5').scrollIntoView();
+  }
+
+if (event.target == modal6) {
+    modal6.style.display = "none";
+    document.getElementById('myBtn6').scrollIntoView();
+  }
+
+if (event.target == modal7) {
+    modal7.style.display = "none";
+    document.getElementById('myBtn7').scrollIntoView();
+  }
+}
+</script>
