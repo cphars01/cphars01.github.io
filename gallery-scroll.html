@@ -96,6 +96,16 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
   max-height: 100%; 
   z-index: 3;
 }
+
+ #content-overlay {
+  display: block;
+  position: absolute;
+  width: 1080px;
+  height: 1440px;
+  bottom: 0;
+  z-index: 4;
+  padding-left: 30%;
+}
     
 .modal-backdrop
 {
@@ -282,13 +292,15 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
 <!-- Eternal -->
 <div id="myModal5" class="modal">
 <span class="close" id="close5">&times;</span> 
-<iframe class="modal-content" src="https://streamable.com/e/0bqnzu?autoplay=1&nocontrols=1" width="675" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<img class="modal-content" id="content-overlay" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/bathroom.png?raw=true">
+<iframe class="modal-content" src="https://streamable.com/e/0bqnzu?autoplay=1&nocontrols=1" width="540" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+
 </div>
     
 <!-- Dungeon -->
 <div id="myModal6" class="modal">
 <span class="close" id="close6">&times;</span>
-<iframe class="modal-content" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<iframe class="modal-content" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="864" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <!-- Communion -->
