@@ -7,27 +7,36 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
 #myBtn1 {
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.1s;
+  transition: 0.3s;
 }
 
 .myBtnHover:hover {opacity:50%}
     
 .li_images{
-    height:50vw;
-    width:auto;
+    height:auto;
+    width:30vw;
     float:left;
 }
 
 .li_txt{
-    height:9.25vw;
+    max-height: 200px;
     width:auto;
     float:left;
 }
     
 .inner{
     width:97vw;
+    height:50vw;
 }
 
+.divtxt{
+    width:97vw;
+    height:200px;
+}
+    
+.txtMarg{
+    margin-bottom: 100px;
+}
     
 /* The Modal (background) */
 .modal {
@@ -41,7 +50,7 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,1); /* Black w/ opacity */
+  background-color: rgba(255,255,255,1); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -93,7 +102,7 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #f1f1f1;
+  color: #000;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -106,7 +115,7 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens 
+ /*100% Image Width on Smaller Screens 
 @media only screen and (max-width: 700px){
   .modal-content {
     width: 100%;
@@ -131,61 +140,82 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
         </li>
         
         <li class="li_images">
-        <a href="#"><img id="myBtn3 myBtnHover" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true" height="60%" width="auto"></a>
+        <a href="#"><img id="myBtn3" class="myBtnHover" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true" height="60%" width="auto"></a>
         </li>
     </ul>
-</div>
-
-
-<div class="inner">
+  
+<! TITLES ROW 1 >
     <ul>          
-        <li class="li_txt">
-        <a href="#"><img src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" height="60%" width="auto"></a>
+        <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
         </li>
 
-        <li class="li_txt">
-        <a href="#"><img src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" height="60%" width="auto"></a>
+      <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
         </li>
         
-        <li class="li_txt">
-        <a href="#"><img src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" height="60%" width="auto"></a>
+      <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
         </li>
     </ul>
-</div>
-
-<div class="inner">
+    
     <ul>          
-        <li class="li_images myBtnHover">
+        <li class="li_images">
         <img src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-2.png?raw=true" height="60%" width="auto">
         </li>
 
-        <li class="li_images myBtnHover">
-        <a href="#"><img id="myBtn7" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true" height="60%" width="auto"></a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn7" class="myBtnHover" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true" height="60%" width="auto"></a>
         </li>
         
-        <li class="li_images myBtnHover">
+        <li class="li_images">
         <img src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/gallery-1.png?raw=true" height="60%" width="auto">
         </li>
-    </ul>
-</div>
-
-
+    </ul> 
     
+<! TITLES ROW 2: >
+    <ul>          
+        <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
+        </li>
 
-<div class="inner">
-    <ul>
-        <li class="li_images myBtnHover">
-        <a href="#"><img id="myBtn4" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true" height="60%" width="auto"></a>
+      <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
         </li>
         
-        <li class="li_images myBtnHover">
-        <a href="#"><img id="myBtn5" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true" height="60%" width="auto"> </a>
+      <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
+        </li>
+    </ul>
+    
+    <ul>
+        <li class="li_images">
+        <a href="#"><img id="myBtn4" class="myBtnHover" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true" height="60%" width="auto"></a>
+        </li>
+        
+        <li class="li_images">
+        <a href="#"><img id="myBtn5" class="myBtnHover" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true" height="60%" width="auto"> </a>
         </li>
 
-        <li class="li_images myBtnHover">
-        <a href="#"><img id="myBtn6" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true" height="60%" width="auto"></a>
+        <li class="li_images">
+        <a href="#"><img id="myBtn6" class="myBtnHover" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true" height="60%" width="auto"></a>
         </li>
-    </ul>    
+    </ul>  
+    
+<! TITLES ROW 3: >
+    <ul>          
+        <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
+        </li>
+
+      <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
+        </li>
+        
+      <li class="li_images">
+        <a><img class="txtMarg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/title-odalisque.png?raw=true" width="100%" height="auto"></a>
+        </li>
+    </ul>
 </div>
 
 <!-- Odalisque -->
