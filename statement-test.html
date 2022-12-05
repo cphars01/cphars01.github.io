@@ -13,7 +13,7 @@ body {
 .column {
   float: left;
   width: 33.33%;
-  height:70%;  
+  height:100vh;  
 }
 
 /* Clear floats after the columns */
@@ -25,7 +25,7 @@ body {
     
 .inner{
     max-width:33.33vw;
-    height:43vw;
+    height:100vh;
     overflow: scroll;
     padding-left: 20px;
     padding-right: 20px;
@@ -36,23 +36,26 @@ body {
 } 
 
 .centered {
+    position: absolute;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    padding-top: 2%;
+    width: 40%;
 }
 
-    .linkpadding{
-        padding-bottom: 300px;
-    }  
+.bgimgL {
+    background-image: url('https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-left-tall.png?raw=true');
+}
+
+.bgimgR {
+    background-image: url('https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-right-tall.png?raw=true');
+}
+    
 </style>
 
 <div class="row">
     
-<div class="column">
-    <img class="centered" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-left-tall.png?raw=true" style="width:30vw" height="auto">
-</div>
+<a href="https://cphars01.github.io/gallery-scroll.html"><div class="column bgimgL"></div></a>
     
 <div class="column monofont">
     <div class="inner" style="background-color: white; font-size: 1rem; color: black">   
@@ -69,12 +72,6 @@ body {
     </div>
 </div>
     
-<div class="column">
-    <img class="centered" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-right-tall.png?raw=true" style="width:30vw" height="auto"></div> 
-</div>
-    
-<div style = "position:relative; top:22vh">
- <center><a href="https://cphars01.github.io/gallery-scroll.html">[GALLERY]</a></center>   
-</div>
-     
+<a href="https://cphars01.github.io/gallery-scroll.html"><div class="column bgimgR"></div></a>  
+
 </html>
