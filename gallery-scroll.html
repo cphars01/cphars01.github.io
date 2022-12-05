@@ -177,42 +177,37 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
 
 .eternalvid
     {
-      position:absolute;
-  display: block;
-        margin-top: 300px;
-  margin-left: 35%;
-  margin-right: auto;
-padding-left: 200px;
-        min-width: 560px;
-max-width: 560px;    
-      z-index: 1;
-                padding-top: 3%;
+position:absolute;
+display: block;
+margin-top: 200px;
+margin-left: 40%;
+min-height: 896px;
+max-height: 896px;    
+min-width: 560px;
+max-width: 560px;              
+z-index: 1;
     }
+
 .eternalimg
     {
-      position:absolute;
-  display: block;
-  margin-left: 35%;
-
-  margin-right: auto;
-  width: 50%;
-      z-index: 2;
+position:absolute;
+display: block;
+margin-left: 35%;
 min-width: 1000px;
 max-width: 1000px;   
-                padding-top: 5%;
+z-index: 2;
     }
 
-    .eternalprint
-    {
-      position:absolute;
-  display: block;
-  margin-left: 23.25%;
-
-  margin-right: auto;
-  width: 50%;
-z-index: 3; 
-padding-top: 5%;
-    }
+.videcenter{
+padding-top: 5%; 
+min-height: 1080px;
+max-height: 1080px; 
+    }   
+    
+.ataraxiacenter{
+min-height: 2000px;
+max-height: 2000px; 
+    }   
     
 </style>
 
@@ -318,13 +313,14 @@ padding-top: 5%;
 <!-- Pull -->
 <div id="myModal2" class="modal">   
 <span class="close" id="close2">&times;</span>      
-<iframe class="modal-content" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="1080" height="1080" allowfullscreen allow="autoplay"></iframe>
+<iframe class="modal-content videcenter" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="1080" height="1080" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <!-- Pleasure -->
 <div id="myModal3" class="modal">   
 <span class="close" id="close3">&times;</span>       
-<img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true" min-width="1080px">
+<img class="modal-content ataraxiacenter" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true">
+    
 </div>
     
 <!-- Death -->
@@ -333,7 +329,7 @@ padding-top: 5%;
 <span class="close" id="close4">&times;</span>
 <!--<iframe class="modal-content" src="https://streamable.com/e/hfjj4m?autoplay=1&nocontrols=1" width="608" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>-->
 <!--<img class="modal-content" id="content-overlay2" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/deathdrive-website.png?raw=true" width="1965px" height="1169px">-->
-<iframe class="modal-content" id="death-padding" src="https://streamable.com/e/pi3oh2?autoplay=1&nocontrols=1" width="560" height="998" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<iframe class="modal-content videcenter" id="death-padding" src="https://streamable.com/e/pi3oh2?autoplay=1&nocontrols=1" width="606" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
 
     
@@ -341,7 +337,7 @@ padding-top: 5%;
 <div id="myModal5" class="modal">
 <span class="close" id="close5">&times;</span> 
 
-    <img class="eternalimg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/bathroom7.png?raw=true" >
+    <img class="eternalimg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/bathroom-frame.png?raw=true" >
     
     <iframe class="modal-content eternalvid" src="https://streamable.com/e/i5vxby?autoplay=1&nocontrols=1" width="560px" height="896px" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 
@@ -350,13 +346,13 @@ padding-top: 5%;
 <!-- Dungeon -->
 <div id="myModal6" class="modal">
 <span class="close" id="close6">&times;</span>
-<iframe class="modal-content" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="864" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<iframe class="modal-content videcenter" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <!-- Communion -->
 <div id="myModal7" class="modal">
 <span class="close" id="close7">&times;</span>
-<iframe class="modal-content" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<iframe class="modal-content videcenter" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
 
 <script>
