@@ -25,10 +25,11 @@ body {
     
 .inner{
     max-width:33.33vw;
-    height:100vh;
-    overflow: scroll;
+    height:90vh;
+    overflow-y: scroll;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 100px;
 }    
 
 .monofont {
@@ -43,19 +44,23 @@ body {
     width: 40%;
 }
 
-.bgimgL {
-    background-image: url('https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-left-tall.png?raw=true');
-}
-
-.bgimgR {
-    background-image: url('https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-right-tall.png?raw=true');
-}
+img {
+    position: relative;
+    margin: auto;
+    width: 30vw;
+    top: 50%;
+    left: 50%;
+    margin-top:-23vw;
+    margin-left:-15vw;
+} 
     
 </style>
 
 <div class="row">
     
-<a href="https://cphars01.github.io/gallery-scroll.html"><div class="column bgimgL"></div></a>
+    <div class="column">
+    <a href="https://cphars01.github.io/gallery-scroll.html"><img class="img" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-left-tall.png?raw=true"></a>
+    </div></a>
     
 <div class="column monofont">
     <div class="inner" style="background-color: white; font-size: 1rem; color: black">   
@@ -72,6 +77,7 @@ body {
     </div>
 </div>
     
-<a href="https://cphars01.github.io/gallery-scroll.html"><div class="column bgimgR"></div></a>  
-
+<div class="column">
+    <a href="https://cphars01.github.io/gallery-scroll.html"><img style="img" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-right-tall.png?raw=true"></a></div>
+</div>   
 </html>
