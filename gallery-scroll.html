@@ -212,8 +212,7 @@ max-height: 1080px;
 
 .z3{
 opacity: 40%;    
-
-z-index:3;
+z-index:5;
 }
 
 .z4{
@@ -229,23 +228,9 @@ max-height: 75vh;
 min-height: 75vh;
 }   
 
-.maze{
-min-height: 896px;
-max-height: 896px;
-min-width: 896px;
-max-width: 896px;  
-opacity: 50%;
-z-index: 2; 
-}
 
-.commvid{
-min-height: 896px;
-max-height: 896px;    
-min-width: 896px;
-max-width: 896px; 
-z-index: 1;
 
-}
+
 
 .videcenter{
 position: absolute;
@@ -254,13 +239,24 @@ padding-left: 35vw;
 max-height: 75vh;
 min-height: 75vh;
 }   
-  
+
+.comcenter{
+position: absolute;
+padding-top: 100px;
+padding-left: 35vw;
+padding-right: 35vw;
+min-height: 720px;
+max-height: 720px;    
+min-width: 720px;
+max-width: 720px; 
+}  
+    
 .pull-left{
 position: absolute;
 padding-top: 100px;
 padding-left: 5vw;
-max-height: 75vh;
-min-height: 75vh;
+max-height: 50vh;
+min-height: 50vh;
 }   
     
 .pullcenter{
@@ -397,7 +393,7 @@ font-family: 'Courier New', monospace;
 <!-- Pull -->
 <div id="myModal2" class="modal">   
 <span class="close" id="close2">&times;</span>
-<iframe class="modal-content pullcenter" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="1080" height="1080" allowfullscreen allow="autoplay"></iframe>
+<iframe class="pullcenter" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="1080" height="1080" allowfullscreen allow="autoplay"></iframe>
 <img class="modal-content pull-left" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/labor-code.png?raw=true">
 </div>
     
@@ -435,8 +431,8 @@ font-family: 'Courier New', monospace;
 <span class="close" id="close7">&times;</span>
 <!--<img class="handL" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/hand-L.png?raw=true" >-->
 <!--<img class="handR" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/hand-R.png?raw=true" >-->
-<img class="modal-content videcenter maze" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/squaregif.gif?raw=true" width="720" height="720">
-<iframe class="modal-content videcenter commvid" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="720" height="720" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<img class="modal-content comcenter z4" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/squaregif.gif?raw=true" width="720" height="720">
+<iframe class="modal-content comcenter z3" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="720" height="720" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <h2 style="monofont[]"><center><a href="https://cphars01.github.io/statement-test.html"> Artist Statement </a></center></h2>
