@@ -97,7 +97,6 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
 .modal-content {
  margin: auto;
   display: block;
-  max-height: 100%; 
   z-index: 3;
 }
 
@@ -186,23 +185,26 @@ max-height: 896px;
 min-width: 560px;
 max-width: 560px;              
 z-index: 1;
-    }
+}
 
-.eternalimg
-    {
+.eternalimg{
 position:absolute;
 display: block;
-margin-left: 35%;
-min-width: 1000px;
-max-width: 1000px;   
-z-index: 2;
-    }
+margin-top: 200px;
+margin-left: 40%;
+min-height: 896px;
+max-height: 896px;
+min-width: 560px;
+max-width: 560px;   
+z-index: 3;
+opacity: 70%;
+}
 
 .videcenter{
 padding-top: 5%; 
 min-height: 1080px;
 max-height: 1080px; 
-    }   
+}   
 
 .pullcenter{
 position:absolute;
@@ -210,12 +212,17 @@ display: block;
 margin-left: 35%;
 min-height: 720px;
 max-height: 720px; 
-    }   
+}   
     
 .ataraxiacenter{
 min-height: 2000px;
 max-height: 2000px; 
-    }   
+}   
+
+    .odacenter{
+min-height: 100vh;
+max-height: 100vh; 
+}   
     
 .monofont {
 font-family: 'Courier New', monospace;
@@ -319,21 +326,20 @@ font-family: 'Courier New', monospace;
 <!-- Odalisque -->
 <div id="myModal1" class="modal">   
 <span class="close" id="close1">&times;</span>
-<img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true">
+<img class="modal-content odacenter" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true" >
 </div>
 
 <!-- Pull -->
 <div id="myModal2" class="modal">   
 <span class="close" id="close2">&times;</span>
 <iframe class="modal-content" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="1080" height="1080" allowfullscreen allow="autoplay"></iframe>
-<img class="pullcenter" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/labor-code.png?raw=true" >
+<img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/labor-code.png?raw=true" >
 </div>
     
 <!-- Pleasure -->
 <div id="myModal3" class="modal">   
 <span class="close" id="close3">&times;</span>       
-<img class="modal-content ataraxiacenter" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true">
-    
+<img class="modal-content ataraxiacenter" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true">   
 </div>
     
 <!-- Death -->
@@ -344,16 +350,12 @@ font-family: 'Courier New', monospace;
 <!--<img class="modal-content" id="content-overlay2" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/deathdrive-website.png?raw=true" width="1965px" height="1169px">-->
 <iframe class="modal-content videcenter" id="death-padding" src="https://streamable.com/e/pi3oh2?autoplay=1&nocontrols=1" width="606" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
-
     
 <!-- Eternal -->
 <div id="myModal5" class="modal">
 <span class="close" id="close5">&times;</span> 
-
-    <img class="eternalimg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/bathroom-frame.png?raw=true" >
-    
-    <iframe class="eternalvid" src="https://streamable.com/e/i5vxby?autoplay=1&nocontrols=1" width="560px" height="896px" frameborder="0" allowfullscreen allow="autoplay"></iframe>
-
+<img class="eternalimg" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/bathroom-frame.png?raw=true" >   
+<iframe class="eternalvid" src="https://streamable.com/e/i5vxby?autoplay=1&nocontrols=1" width="560px" height="896px" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <!-- Dungeon -->
