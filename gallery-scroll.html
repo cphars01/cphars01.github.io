@@ -174,27 +174,14 @@ body {font-family: Arial, Helvetica, sans-serif; background-color:white;}
   }
 }*/
 
-.eternalvid{
-position:absolute;
-margin-top: 200px;
-margin-left: 40%;
-min-height: 896px;
-max-height: 896px;    
-min-width: 560px;
-max-width: 560px;              
-z-index: 1;
-}
 
 .eternalimg{
-position:absolute;
-display: block;
-margin-top: 200px;
-margin-left: 40%;
-min-height: 896px;
-max-height: 896px;
-min-width: 560px;
-max-width: 560px;   
-}
+position: absolute;
+padding-top: 100px;
+padding-left: 35vw;
+max-height: 70vh;
+min-height: 70vh;
+}  
 
 .handR{
 position:absolute;
@@ -217,56 +204,66 @@ max-height: 1080px;
 }
 
 .z3{
-opacity: 40%;    
-z-index:3;
+opacity: 90%;    
+z-index:5;
 }
 
 .z4{
 z-index:4;
+
 }
+
+.bathroomcenter{
+position: absolute;
+padding-top: 100px;
+padding-left: 35vw;
+max-height: 1080px;
+min-height: 1080px;
+max-width: 720px;
+min-width: 720px;
+}   
+
 
 .videcenter{
+position: absolute;
 padding-top: 100px;
-max-height: 75vh;
-min-height: 75vh;
+padding-left: 35vw;
+max-height: 100vh;
+min-height: 100vh;
 }   
 
-.maze{
-position:absolute;
-display: block;
-margin-top: 200px;
-margin-left: 35%;
-min-height: 896px;
-max-height: 896px;
-min-width: 896px;
-max-width: 896px;  
-opacity: 50%;
-z-index: 2; 
-}
-
-.commvid{
-position:absolute;
-margin-top: 200px;
-margin-left: 35%;
-min-height: 896px;
-max-height: 896px;    
-min-width: 896px;
-max-width: 896px; 
-z-index: 1;
-
-}
-  
-.pullcenter{
-position:absolute;
-display: block;
-margin-left: 35%;
+.comcenter{
+position: absolute;
+padding-top: 100px;
+padding-left: 35vw;
+padding-right: 35vw;
 min-height: 720px;
-max-height: 720px; 
+max-height: 720px;    
+min-width: 720px;
+max-width: 720px; 
+}  
+    
+.pull-left{
+position: absolute;
+padding-top: 100px;
+padding-left: 15vw;
+max-height: 50vh;
+min-height: 50vh;
 }   
     
+.pullcenter{
+position: absolute;
+padding-top: 100px;
+padding-left: 50vw;
+max-height: 50vh;
+min-height: 50vh;
+}    
+    
 .ataraxiacenter{
-min-height: 2000px;
-max-height: 2000px; 
+position: relative;    
+min-height: 110vh;
+max-height: 110vh; 
+margin-top: -5vh;
 }   
 
 .odacenter{
@@ -274,9 +271,59 @@ min-height: 100vh;
 max-height: 100vh; 
 }   
     
+.crawlingvid{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height:90vh;
+    min-height:90vh;
+    padding-top: 2vw;
+    border: 5px;
+}     
+
+.eternal-stack{
+    position: absolute;
+    display: block;
+    padding-top: 100px;
+    padding-left: 40vw;
+    max-width: 100vw;
+    max-height:100vh;
+}  
+ 
+.eternal-stackV{
+    position: absolute;
+    display: block;
+    padding-left: 40vw;
+    max-width: 576px;
+    min-width:576px; 
+    max-height:1080px;
+    min-height:1080px;
+}  
+    
 .monofont {
 font-family: 'Courier New', monospace;
 }     
+
+.centered {
+    position: absolute;
+    display:block;
+    margin-left: 40%;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+    .stack{
+    position: absolute;
+   
+    max-height: 100vw;
+    margin-left: 35%;
+    margin-right: auto;
+    margin-top: 5vw;
+ 
+    }
+
+
     
 </style>
 
@@ -382,14 +429,14 @@ font-family: 'Courier New', monospace;
 <!-- Pull -->
 <div id="myModal2" class="modal">   
 <span class="close" id="close2">&times;</span>
-<iframe class="modal-content videcenter" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="1080" height="1080" allowfullscreen allow="autoplay"></iframe>
-<img class="modal-content" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/labor-code.png?raw=true" >
+<iframe class="pullcenter" src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1" frameborder="0" width="720" height="720" allowfullscreen allow="autoplay"></iframe>
+<img class="modal-content pull-left" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/labor-code.png?raw=true">
 </div>
     
 <!-- Pleasure -->
 <div id="myModal3" class="modal">   
 <span class="close" id="close3">&times;</span>       
-<img class="modal-content ataraxiacenter" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true">   
+<img class="modal-content ataraxiacenter" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true"> <!-- max-height="1089px" max-width="842px" -->!>   
 </div>
     
 <!-- Death -->
@@ -398,21 +445,21 @@ font-family: 'Courier New', monospace;
 <span class="close" id="close4">&times;</span>
 <!--<iframe class="modal-content" src="https://streamable.com/e/hfjj4m?autoplay=1&nocontrols=1" width="608" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>-->
 <!--<img class="modal-content" id="content-overlay2" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/deathdrive-website.png?raw=true" width="1965px" height="1169px">-->
-<iframe class="modal-content videcenter" id="death-padding" src="https://streamable.com/e/pi3oh2?autoplay=1&nocontrols=1" width="999" height="1620" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<iframe class="modal-content crawlingvid" id="death-padding" src="https://streamable.com/e/pi3oh2?autoplay=1&nocontrols=1" width="999" height="1620" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <!-- Eternal -->
 <div id="myModal5" class="modal">
 <span class="close" id="close5">&times;</span> 
-<img class="eternalimg z4" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/bathroom-border.png?raw=true" >  
-<img class="eternalimg z3" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/b-mirror.png?raw=true" >   
-<iframe class="eternalvid" src="https://streamable.com/e/i5vxby?autoplay=1&nocontrols=1" width="560px" height="896px" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<!-- <img class="eternal-stack z4" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/bathroom-border.png?raw=true" width="576px" height="900px">  -->
+<!-- <img class="eternal-stack z3" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/b-mirror.png?raw=true" width="576px" height="900px">   -->
+<iframe class="modal-content crawlingvid" src="https://streamable.com/e/i5vxby?autoplay=1&nocontrols=1" width="576px" height="1080px" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <!-- Dungeon -->
 <div id="myModal6" class="modal">
 <span class="close" id="close6">&times;</span>
-<iframe class="modal-content videcenter" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<iframe class="modal-content crawlingvid" src="https://streamable.com/e/ug11d9?autoplay=1&nocontrols=1" width="810" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <!-- Communion -->
@@ -420,8 +467,8 @@ font-family: 'Courier New', monospace;
 <span class="close" id="close7">&times;</span>
 <!--<img class="handL" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/hand-L.png?raw=true" >-->
 <!--<img class="handR" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/hand-R.png?raw=true" >-->
-<img class="maze" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/squaregif.gif?raw=true" >
-<iframe class="commvid" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="720" height="720" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<img class="modal-content stack z4" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/squaregif.gif?raw=true" width="720" height="720">
+<iframe class="modal-content stack z3" src="https://streamable.com/e/ts3cdb?autoplay=1&nocontrols=1" width="720" height="720" frameborder="0" allowfullscreen allow="autoplay"></iframe>
 </div>
     
 <h2 style="monofont[]"><center><a href="https://cphars01.github.io/statement-test.html"> Artist Statement </a></center></h2>
