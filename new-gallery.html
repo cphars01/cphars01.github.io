@@ -1,0 +1,112 @@
+<html>   
+<head>
+</head>  
+<style>
+    body{
+        display:flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        margin-right: 10px;
+        margin-left: 10px;
+        width: auto;
+        min-height: 70vh;
+        max-height: 70vh;
+    }
+    button {
+        top: 20vh;
+        margin:2px;
+        width:32px;
+        height:32px;
+        font-size:16px;
+    }   
+</style>
+    
+<body>
+    <button id="myBtnMinus"><</button>
+    <img id="imgid" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true">
+    <img id="imgid2" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true">
+    <button id="myBtnPlus">></button>
+<script>
+document.getElementById("myBtnMinus").addEventListener("click", imgMinus);
+document.getElementById("myBtnPlus").addEventListener("click", imgPlus);  
+let counter = 0;
+function imgMinus(){  
+    if (counter == 0){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true";
+        counter = 6;
+    }
+    else if (counter == 1){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/2-pushpullrepeat.jpg?raw=true";
+        counter--;
+    }
+    else if (counter == 2){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/3-pleasureprinciple.jpg?raw=true";
+        counter--;
+    }
+    else if (counter == 3){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/4-deathdrive.jpg?raw=true";
+        counter--;
+    }
+    else if (counter == 4){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-eternalflame.jpg?raw=true";
+        counter--;
+    }
+    else if (counter == 5){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-dungeoncrawling.jpg?raw=true";
+        counter--;
+    }
+    else if (counter == 6){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/7-communion.jpg?raw=true";
+        counter--;
+    }      
+}
+function imgPlus(){  
+    if (counter == 6){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true";
+        counter = 0;
+    }
+    else if (counter == 0){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true"; 
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/2-pushpullrepeat.jpg?raw=true";
+        counter++;
+    }
+    else if (counter == 1){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/3-pleasureprinciple.jpg?raw=true";
+        counter++;
+    }
+    else if (counter == 2){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/4-deathdrive.jpg?raw=true";
+        counter++;
+    }
+    else if (counter == 3){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-eternalflame.jpg?raw=true";
+        counter++;
+    }
+    else if (counter == 4){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-dungeoncrawling.jpg?raw=true";
+        counter++;
+    }
+    else if (counter == 5){
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/7-communion.jpg?raw=true";
+        counter++;
+    }      
+}
+</script>
+</body>    
+</html>
