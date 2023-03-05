@@ -1,0 +1,146 @@
+<html>   
+<head>
+</head>  
+<style>
+    body{
+        font-family: "Lucida Console", "Courier New", monospace;
+        display:flex;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+    }
+    img{
+        margin-right:10px;
+        margin-left:10px;
+        min-width:10vw;
+        min-height:10vh;
+        max-height:70vh;
+    }
+    button {
+        top:20vh;
+        padding-right:10px;
+        padding-left:10px;
+        width:2vw;
+        height:2vw;
+        font-size:.5vw;
+        color: black;
+        border: none;
+        transition-duration: 0.1s;
+        z-index:2;
+        cursor:pointer;
+    }  
+    .hover:hover {
+        background-color: darkgrey;
+    }
+    .sidenavL {
+        font-family: "Lucida Console";
+        height:100vh;
+        width:8vw;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        background-color:#fbfbfb;
+        overflow-x:hidden;
+        padding-top:20px;
+    }
+    .sidenavR {
+        font-family: "Lucida Console";
+        height:100vh;
+        width:8vw;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:92vw;
+        background-color:#fbfbfb;
+        overflow-x:hidden;
+        padding-top:20px;
+    }
+    .sidenavL a {
+        padding: 6px 8px 6px 16px;
+        text-decoration:none;
+        font-size:.7vw;
+        color:black;
+        display:block;
+        font-weight:lighter;
+    }
+    .sidenav a:hover {
+        color:#f1f1f1;
+    }
+    .main {
+        font-size:1vw;
+        padding:0px 10px;
+    }
+
+</style>
+    
+<body>
+    
+<div class="sidenavL">
+    <a class="hover" href="#about">Home</a>
+    <a class="hover" href="#services">Statement</a>
+    <a class="hover" href="#clients">Gallery</a>
+    <a class="hover" href="#contact">Contact</a>
+</div>
+
+<button class="hover" id="BtnMinus"><</button>
+<img id="imgIDleft" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true">
+<img id="imgIDright" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true">
+<button class="hover" id="BtnPlus">></button>
+
+<div class="sidenavR">
+</div>
+        
+<script>
+
+var counter = 0;
+const imgL = document.getElementById("imgIDleft");
+const imgR = document.getElementById("imgIDright");
+const button_minus = document.getElementById("BtnMinus");
+const button_plus = document.getElementById("BtnPlus");
+
+
+function refresh_image(){  
+    if (counter == 0){
+        imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true";
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true";            
+    }   
+    else if (counter == 1){
+        imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true";
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/2-pushpullrepeat.jpg?raw=true";          
+    }    
+    else if (counter == 2){
+        imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true";
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/3-pleasureprinciple.jpg?raw=true";          
+    }    
+    else if (counter == 3){
+        imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true";
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/4-deathdrive.jpg?raw=true";                
+    }    
+    else if (counter == 4){
+        imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true";
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-eternalflame.jpg?raw=true";             
+    }    
+    else if (counter == 5){
+        imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true";
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-dungeoncrawling.jpg?raw=true";            
+    }
+    else {
+        imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true";
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/7-communion.jpg?raw=true";            
+    }
+}
+
+button_minus.addEventListener("click",() => {
+    counter = (counter + 7 - 1) % 7;
+    console.log("Counter = " + counter.toString())
+    refresh_image();
+});
+button_plus.addEventListener("click",() => {
+    counter = (counter + 7 + 1) % 7;
+    refresh_image();
+});
+
+</script>
+</body>    
+</html>

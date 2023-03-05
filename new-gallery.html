@@ -5,39 +5,93 @@
     body{
         font-family: "Lucida Console", "Courier New", monospace;
         display:flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
     }
     img{
-        margin-right: 10px;
-        margin-left: 10px;
-        width: auto;
-        min-height: 70vh;
-        max-height: 70vh;
+        margin-right:10px;
+        margin-left:10px;
+        min-width:10vw;
+        min-height:10vh;
+        max-height:70vh;
     }
     button {
-        top: 20vh;
-        margin:2px;
+        top:20vh;
+        margin-right:10px;
+        margin-left:10px;
         width:32px;
         height:32px;
         font-size:16px;
     }   
+    .sidenavL {
+        font-family: "Lucida Console";
+        height:100vh;
+        width:8vw;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        background-color:#fbfbfb;
+        overflow-x:hidden;
+        padding-top:20px;
+    }
+    .sidenavR {
+        font-family: "Lucida Console";
+        height:100vh;
+        width:8vw;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:92vw;
+        background-color:#fbfbfb;
+        overflow-x:hidden;
+        padding-top:20px;
+    }
+    .sidenavL a {
+        padding: 6px 8px 6px 16px;
+        text-decoration:none;
+        font-size:.85vw;
+        color:black;
+        display:block;
+    }
+    .sidenav a:hover {
+        color:#f1f1f1;
+    }
+    .main {
+        font-size:1vw;
+        padding:0px 10px;
+    }
+
 </style>
     
 <body>
-    <button id="myBtnMinus"><</button>
-    <img id="imgid" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true">
-    <img id="imgid2" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true">
-    <button id="myBtnPlus">></button>
+    
+<div class="sidenavL">
+    <a href="#about">Home</a>
+    <a href="#services">Statement</a>
+    <a href="#clients">Gallery</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<button id="myBtnMinus"><</button>
+<img id="imgid" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true">
+<img id="imgid2" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true">
+<button id="myBtnPlus">></button>
+
+<div class="sidenavR">
+</div>
+        
 <script>
+    
 document.getElementById("myBtnMinus").addEventListener("click", imgMinus);
 document.getElementById("myBtnPlus").addEventListener("click", imgPlus);  
 let counter = 0;
+    
 function imgMinus(){  
     if (counter == 0){
-        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true";
-        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true";
+        document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true";
+        document.getElementById("imgid2").src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/7-communion.jpg?raw=true";
         counter = 6;
     }
     else if (counter == 1){
@@ -71,6 +125,7 @@ function imgMinus(){
         counter--;
     }      
 }
+    
 function imgPlus(){  
     if (counter == 6){
         document.getElementById("imgid").src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true";
