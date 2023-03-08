@@ -106,8 +106,17 @@
         display: block;
         z-index: 3;
     }
+    #video_modal_ID_css{
+        min-height: 90vh;
+        max-height: 90vh;
+        width: auto;
+        margin: auto;
+        display: block;
+        z-index: 3;    
+    }
 </style><!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <body>
+    
 <!-- left side navigation --> 
 <div class="sidenavL">
     <a class="hover" href="https://www.christopherharshfield.com/">Home</a>
@@ -115,88 +124,162 @@
     <a class="hover" href="#clients">Gallery</a>
     <a class="hover" href="#contact">Contact</a>
 </div>
+    
 <!-- images that refresh on (<)(>) button click -->    
 <button class="hover" id="BtnMinus"><</button>
 <img class="modal_hover" id="imgIDleft" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true">
 <img id="imgIDright" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true">
 <button class="hover" id="BtnPlus">></button>
+    
 <!-- modal -->    
-<div id="modal_window" class="modal_style">   
-<span class="close" id="span_close">&times;</span>
-<img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true" >
+<div id="modal_window" class="modal_style"> 
+    <!--// Modal image to refresh.-->
+    <span class="close" id="span_close">&times;</span>
+    <img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true" >
+    <!--Modal video to refresh.-->
+    <iframe id="video_modal_ID" src="https://streamable.com/e/391eb7?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>  
 </div>
 
 <script> <!-- ------------------------------------------------------------------------------------------------------------------------- -->  
 var counter = 0;
 const imgL = document.getElementById("imgIDleft");
 const imgR = document.getElementById("imgIDright");
+
+// Image and Video to refresh with function.
 const modal_img = document.getElementById("img_modal_ID");
+const modal_video = document.getElementById("video_modal_ID");
+
+// Next/Previous buttons.
 const button_minus = document.getElementById("BtnMinus");
 const button_plus = document.getElementById("BtnPlus");
-// Get the modal
+    
+// Get the modal.
 const modal = document.getElementById("modal_window"); 
 // Get the <span> element that closes the modal
 const span_close = document.getElementById("span_close");
-// refresh L and R and modal image function
+
+// Prehide video to refresh.
+document.getElementById("video_modal_ID").style.display = "none";
+    
+// Refreshes L and R images + modal image/video.
 function refresh_image(){  
+    
     if (counter == 0){
+        
+        // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true";
-        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true";      
-        modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";    
-    }   
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true";
+        
+        // Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID").style.display = "block";
+
+        //Get new image.
+        modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";
+        }   
+    
     else if (counter == 1){
+        
+        // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/2_pullpushrepeat.png?raw=true";
-        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/2-pushpullrepeat.jpg?raw=true";   
-        modal_img.src="https://streamable.com/e/f3f20x?autoplay=1&nocontrols=1";         
-    }    
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/2-pushpullrepeat.jpg?raw=true";
+
+        // Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_modal_ID").style.display = "block";
+        document.getElementById("img_modal_ID").style.display = "none";
+        
+        //Get new video.
+        document.getElementById("video_modal_ID").src = "https://streamable.com/391eb7?autoplay=1&nocontrols=1";
+        document.getElementById("video_modal_ID").load();     
+        }    
+    
     else if (counter == 2){
+        
+        // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true";
-        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/3-pleasureprinciple.jpg?raw=true";  
-        modal_img.src="https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg";          
-    }    
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/3-pleasureprinciple.jpg?raw=true";
+
+        // Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID").style.display = "block";
+  
+        //Get new image.
+        modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true";          
+        }    
     else if (counter == 3){
+        // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true";
-        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/4-deathdrive.jpg?raw=true";        
-        modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";          
-    }    
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/4-deathdrive.jpg?raw=true";   
+
+        // Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_modal_ID").style.display = "block";
+        document.getElementById("img_modal_ID").style.display = "none";
+
+        //Get new video.
+        document.getElementById("video_modal_ID").src = "https://streamable.com/pi3oh2";
+        document.getElementById("video_modal_ID").load();        
+        }    
+    
     else if (counter == 4){
+        // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/5_eternalflame.png?raw=true";
-        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-eternalflame.jpg?raw=true";   
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-eternalflame.jpg?raw=true"; 
+
+        // Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID").style.display = "block";
+  
+        //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";            
-    }    
+        }    
     else if (counter == 5){
+        // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true";
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-dungeoncrawling.jpg?raw=true";  
+
+        // Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID").style.display = "block";
+
+        //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";           
-    }
+        }
     else {
+        // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true";
-        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/7-communion.jpg?raw=true";       
+        imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/7-communion.jpg?raw=true";
+
+        // Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID").style.display = "block";
+      
+        //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";       
-    }
-}   
+        }
+    }   
 button_minus.addEventListener("click",() => {
     counter = (counter + 7 - 1) % 7;
     console.log("Counter = " + counter.toString())
     refresh_image();
-});
+    });
 button_plus.addEventListener("click",() => {
     counter = (counter + 7 + 1) % 7;
     refresh_image();
-});
+    });
 imgL.addEventListener("click",() => {
     modal.style.display = "block";
-});
+    });
 <!-- ------------------------------------------------------------------------------------------------------------------------- -->  
 // When the user clicks on <span> (x), close the modal
 span_close.onclick = function() {
     modal.style.display = "none";
-}   
+    }   
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
         }
+        //modalvideo.style.display = "none";
 }
 </script> <!-- ------------------------------------------------------------------------------------------------------------------------- -->  
 </body>    
