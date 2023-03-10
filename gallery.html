@@ -114,6 +114,15 @@
         display: block;
         z-index: 3;    
     }
+    #video_div{
+        min-height: 70vh;
+        max-height: 70vh;
+        width: auto;
+        margin: auto;
+        display: block;
+        padding-top: 10vh;
+        z-index: 3;    
+    }
 </style><!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <body>
     
@@ -133,11 +142,18 @@
     
 <!-- modal -->    
 <div id="modal_window" class="modal_style"> 
+    
     <!--// Modal image to refresh.-->
     <span class="close" id="span_close">&times;</span>
+    
     <img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true" >
+    
     <!--Modal video to refresh.-->
-    <iframe id="video_modal_ID" src="https://streamable.com/e/391eb7?autoplay=1&nocontrols=1" width="1080" height="1080" frameborder="0" allowfullscreen allow="autoplay"></iframe>  
+    <video id="video_div" controls autoplay loop preload width="720" height="720">
+        <source id="video_modal_ID" src="video/pullpushrepeat-UPmp4.mp4" type="video/mp4">
+    </video>
+    <!--<vid id="video_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/video/pullpushrepeat-UPmp4.mp4" type="video/mp4"></vid>-->
+    
 </div>
 
 <script> <!-- ------------------------------------------------------------------------------------------------------------------------- -->  
@@ -159,7 +175,7 @@ const modal = document.getElementById("modal_window");
 const span_close = document.getElementById("span_close");
 
 // Prehide video to refresh.
-document.getElementById("video_modal_ID").style.display = "none";
+document.getElementById("video_div").style.display = "none";
     
 // Refreshes L and R images + modal image/video.
 function refresh_image(){  
@@ -171,7 +187,7 @@ function refresh_image(){
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true";
         
         // Show or hide whether image/video, depending on artwork.
-        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
 
         //Get new image.
@@ -185,40 +201,39 @@ function refresh_image(){
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/2-pushpullrepeat.jpg?raw=true";
 
         // Show or hide whether image/video, depending on artwork.
-        document.getElementById("video_modal_ID").style.display = "block";
+        document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
         
-        //Get new video.
-        document.getElementById("video_modal_ID").src = "https://streamable.com/391eb7?autoplay=1&nocontrols=1";
-        document.getElementById("video_modal_ID").load();     
+        //Modal: Get new video.
+        document.getElementById("video_modal_ID").src = "video/pullpushrepeat-UPmp4.mp4";
         }    
     
-    else if (counter == 2){
-        
+    else if (counter == 2){ 
         // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/3_pleasureprinciple.png?raw=true";
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/3-pleasureprinciple.jpg?raw=true";
 
         // Show or hide whether image/video, depending on artwork.
-        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
   
-        //Get new image.
+        // Modal: Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true";          
         }    
+    
     else if (counter == 3){
         // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/4_deathdrive.png?raw=true";
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/4-deathdrive.jpg?raw=true";   
 
         // Show or hide whether image/video, depending on artwork.
-        document.getElementById("video_modal_ID").style.display = "block";
+        document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
 
-        //Get new video.
-        document.getElementById("video_modal_ID").src = "https://streamable.com/pi3oh2";
-        document.getElementById("video_modal_ID").load();        
-        }    
+        // Modal: Get new video.
+        document.getElementById("video_modal_ID").src = "video/death_drive.mp4";
+        }
+
     
     else if (counter == 4){
         // Change left artwork and right gallery location image.
@@ -226,37 +241,42 @@ function refresh_image(){
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-eternalflame.jpg?raw=true"; 
 
         // Show or hide whether image/video, depending on artwork.
-        document.getElementById("video_modal_ID").style.display = "none";
-        document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("video_div").style.display = "block";
+        document.getElementById("img_modal_ID").style.display = "none";
   
-        //Get new image.
-        modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";            
+        // Modal: Get new video.
+        document.getElementById("video_modal_ID").src = "video/eternal_flame_UP.mp4";
+        video_div.load();
         }    
+    
     else if (counter == 5){
         // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/6_dungeoncrawling.png?raw=true";
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/6-dungeoncrawling.jpg?raw=true";  
 
-        // Show or hide whether image/video, depending on artwork.
-        document.getElementById("video_modal_ID").style.display = "none";
-        document.getElementById("img_modal_ID").style.display = "block";
+        // Modal: Show or hide whether image/video, depending on artwork.
+        document.getElementById("video_div").style.display = "block";
+        document.getElementById("img_modal_ID").style.display = "none";
 
-        //Get new image.
-        modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";           
-        }
+        // Modal: Get new video.
+        document.getElementById("video_modal_ID").src = "video/dungeon_crawling_UP.mp4";    
+        } 
+    
     else {
         // Change left artwork and right gallery location image.
         imgL.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/7_communion.png?raw=true";
         imgR.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/7-communion.jpg?raw=true";
 
         // Show or hide whether image/video, depending on artwork.
-        document.getElementById("video_modal_ID").style.display = "none";
+        document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
       
-        //Get new image.
+        // Modal: Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";       
         }
-    }   
+    video_div.load();
+    }  
+    
 button_minus.addEventListener("click",() => {
     counter = (counter + 7 - 1) % 7;
     console.log("Counter = " + counter.toString())
