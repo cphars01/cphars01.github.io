@@ -1,48 +1,79 @@
-<!DOCTYPE html>
+
 <html>
     
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>home page</title>
 <link rel="stylesheet" href="main.css">
 </head>
     
 <style>
-        
-.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-    padding-top: 2%;
-}
+    /* body and text. */
+    body{
+        background-color:white;
+        font-family: "Lucida Console", "Courier New", monospace;
+        display:flex;
+        text-align:center;
+        align-items:center;
+        justify-content:center;
+        font-size: 1em;
+        color: black;
+        }
+    img{
+        margin-right:10px;
+        margin-left:10px;
+        min-width:10vw;
+        min-height:10vh;
+        max-height:70vh;
+        }
 
-.p-title {
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 1em;
-    color: black;
-    text-align: center;
-}  
-
-
-/* visited link */
+    /* visited link. */
     a:visited {
-  color: black;
-}
-
+        color: black;
+        }
+    /* side navigation bar. */    
+   .sidenavL {
+        font-family: "Lucida Console";
+        height:100vh;
+        width:8vw;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        background-color:#ffffff;
+        overflow-x:hidden;
+        padding-top:20px;
+        }
+    .sidenavL a {
+        padding: 6px 8px 6px 16px;
+        text-decoration:none;
+        font-size: 1em;
+        color:black;
+        display:block;
+        font-weight:lighter;
+        }
+    .sidenav a:hover {
+        color:#f1f1f1;
+        }
+    .hover:hover {
+        background-color: darkgrey;
+        }
 </style>
     
-<body style="background-color:white">    
-    
-    <div class="centered">
-        <p class="p-title">Christopher Harshfield</p>
-        <p class="p-title"> JUNKSPACE | SENIOR EXHIBITION</p>
-        <p class="p-title"> Bolivar Art Gallery, Lexington KY</p>
-        <a href="https://cphars01.github.io/gallery.html"><img class="centered" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/front_images/bolivar-center3.png?raw=true" style="width:100%" height="auto"></a>
-
+<body>    
+    <!-- side navigation bar in body. -->
+    <div class="sidenavL">
+        <a class="hover" href="https://www.christopherharshfield.com/">Home</a>
+        <a class="hover" href="#services">Statement</a>
+        <a class="hover" href="#clients">Gallery</a>
+        <a class="hover" href="/contact.html">Contact</a>
     </div>
-    
+    <!-- center text and images. -->
+    <div class="p-title">
+        <p class=>Christopher Harshfield</p>
+        <p class=> JUNKSPACE | SENIOR EXHIBITION</p>
+        <p class=> Bolivar Art Gallery, Lexington KY</p>
+        <a href="https://cphars01.github.io/gallery.html"><img class="centered" src="digi-images/front_images/bolivar-center3.png" style="width:100%" height="auto"></a>
+    </div>    
 </body>
 </html>
 

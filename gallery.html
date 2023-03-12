@@ -8,14 +8,14 @@
         text-align:center;
         align-items:center;
         justify-content:center;
-    }
+        }
     img{
         margin-right:10px;
         margin-left:10px;
         min-width:10vw;
         min-height:10vh;
         max-height:70vh;
-    }
+        }
     button {
         top:20vh;
         padding-right:10px;
@@ -28,10 +28,10 @@
         transition-duration: 0.1s;
         z-index:2;
         cursor:pointer;
-    }  
+        }  
     .hover:hover {
         background-color: darkgrey;
-    }
+        }
     .sidenavL {
         font-family: "Lucida Console";
         height:100vh;
@@ -43,22 +43,22 @@
         background-color:#ffffff;
         overflow-x:hidden;
         padding-top:20px;
-    }
+        }
     .sidenavL a {
         padding: 6px 8px 6px 16px;
         text-decoration:none;
-        font-size:.7vw;
+        font-size: 1em;
         color:black;
         display:block;
         font-weight:lighter;
-    }
+        }
     .sidenav a:hover {
         color:#f1f1f1;
-    }
+        }
     .main {
         font-size:1vw;
         padding:0px 10px;
-    }
+        }
 /* ----------------------------- */
 /* The Modal */
     .modal_style {
@@ -74,7 +74,7 @@
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(255,255,255,.9); /* Black w/ opacity */
         /*opacity:90%;*/
-    }
+        }
     .close {
         position: absolute;
         top: 15px;
@@ -83,21 +83,21 @@
         font-size: 40px;
         font-weight: bold;
         transition: 0.1s;
-    }
+        }
     .close:hover,
     .close:focus {
         color: #bbb;
         text-decoration: none;
         cursor: pointer;
-    }  
+        }  
     .modal_hover:hover {
         opacity:90%;
         cursor: pointer;
-    }
+        }
     .modalOpen {
         border-radius: 5px;
         transition: 0.1s;
-    }
+        }
     .img_modal_ID{
         min-height: 90vh;
         max-height: 90vh;
@@ -105,7 +105,7 @@
         margin: auto;
         display: block;
         z-index: 3;
-    }
+        }
     #video_modal_ID_css{
         min-height: 90vh;
         max-height: 90vh;
@@ -113,7 +113,7 @@
         margin: auto;
         display: block;
         z-index: 3;    
-    }
+        }
     #video_div{
         min-height: 70vh;
         max-height: 70vh;
@@ -122,7 +122,7 @@
         display: block;
         padding-top: 10vh;
         z-index: 3;    
-    }
+        }
 </style><!-- ------------------------------------------------------------------------------------------------------------------------- --> 
 <body>
     
@@ -275,8 +275,7 @@ function refresh_image(){
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";       
         }
     video_div.load();
-    }  
-    
+    }    
 button_minus.addEventListener("click",() => {
     counter = (counter + 7 - 1) % 7;
     console.log("Counter = " + counter.toString())
@@ -299,9 +298,7 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
         }
-        //modalvideo.style.display = "none";
-}
-//end.
-</script> <!-- ------------------------------------------------------------------------------------------------------------------------- -->  
+    }
+</script>
 </body>    
 </html>
