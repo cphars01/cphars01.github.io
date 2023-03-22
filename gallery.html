@@ -72,7 +72,7 @@
         height: 100%; /* Full height */
         overflow: scroll; /* Enable scroll if needed */
         background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(255,255,255,.9); /* Black w/ opacity */
+        background-color: rgba(255,255,255,.95); /* Black w/ opacity */
         /*opacity:90%;*/
         }
     .close {
@@ -106,6 +106,14 @@
         display: block;
         z-index: 3;
         }
+    .img_modal_ID_2{
+        min-height: 90vh;
+        max-height: 90vh;
+        width: auto;
+        margin: auto;
+        display: block;
+        z-index: 3;
+        }
     #video_modal_ID_css{
         min-height: 90vh;
         max-height: 90vh;
@@ -124,15 +132,24 @@
         z-index: 3;    
         }
     .modal_scale{
-        min-width: 30vw;
-        max-width: 30vw;
+        min-width: 33vw;
+        max-width: 33vw;
         width: auto;
         margin: auto;
         display: block;
-        padding-top: 10vh;
+        padding-top: 5vh;
         z-index: 3;  
-    }
-</style><!-- ------------------------------------------------------------------------------------------------------------------------- --> 
+        }
+    .row {
+        display: inline-flex;
+        }
+    .column {
+        padding-left: 10px;
+        padding-right: 10px;
+        flex: 100%;
+        }
+    
+</style>
 <body>
     
 <!-- left side navigation --> 
@@ -154,14 +171,20 @@
     
     <!--// Modal image to refresh.-->
     <span class="close" id="span_close">&times;</span>
-    
-    <img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true">
-    <img id="img_modal_ID_2" class="modal_scale" src="digi-images/blister-packs.png">
-    
-    <!--Modal video to refresh.-->
-    <video id="video_div" controls autoplay loop preload width="720" height="720">
-        <source id="video_modal_ID" src="video/pullpushrepeat-UPmp4.mp4" type="video/mp4">
-    </video>  
+    <div class="row">
+        <div class="column">
+            <!--Left - modal video to refresh/show/hide.-->
+            <video id="video_div" controls autoplay loop preload width="720" height="720">
+                <source id="video_modal_ID" src="video/pullpushrepeat-UPmp4.mp4" type="video/mp4">
+            </video>  
+            <!--Left - modal image to refresh/show/hide.-->
+            <img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true">
+        </div>
+        <div class="column">
+            <!--Right - modal image to refresh/show/hide.-->
+            <img id="img_modal_ID_2" class="modal_scale" src="digi-images/blister-pack2.png">
+        </div>
+    </div>
 </div>
 
 <script> <!-- ------------------------------------------------------------------------------------------------------------------------- -->  
@@ -184,6 +207,8 @@ const span_close = document.getElementById("span_close");
 
 // Prehide video to refresh.
 document.getElementById("video_div").style.display = "none";
+// Prehide image modal 2 to refresh.    
+document.getElementById("img_modal_ID_2").style.display = "none";
     
 // Refreshes L and R images + modal image/video.
 function refresh_image(){  
@@ -197,6 +222,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("img_modal_ID_2").style.display = "none";
 
         //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";
@@ -211,6 +237,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID_2").style.display = "none";
         
         //Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/pullpushrepeat-UPmp4.mp4";
@@ -224,6 +251,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("img_modal_ID_2").style.display = "block";
   
         // Modal: Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/ataraxia_package_TRAN.png?raw=true";          
@@ -237,6 +265,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID_2").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/death_drive.mp4";
@@ -251,6 +280,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID_2").style.display = "none";
   
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/eternal_flame_UP.mp4";
@@ -265,6 +295,7 @@ function refresh_image(){
         // Modal: Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID_2").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/dungeon_crawling_UP.mp4";    
@@ -278,6 +309,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("img_modal_ID_2").style.display = "none";
       
         // Modal: Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";       
