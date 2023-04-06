@@ -34,43 +34,22 @@
     .hover:hover {
         background-color: darkgrey;
         }
-    .sidenavL {
-        font-family: "Lucida Console";
-        height:100vh;
-        width:8vw;
-        position:fixed;
-        z-index:1;
-        top:0;
-        left:0;
-        background-color:#ffffff;
-        overflow-x:hidden;
-        padding-top:20px;
-        }
-    .sidenavL a {
+/* ----------------------------- */
+/* Top navigation. */
+    .top_nav {
+        display: flex;
+        width: 100vw;
+        height: 10vh;
+        justify-content: space-around;
+        align-items:center; 
+    }
+    .nav_font{
         padding: 6px 8px 6px 16px;
         text-decoration:none;
         font-size: 1em;
         color:black;
         display:block;
         font-weight:lighter;
-        }
-    .sidenav a:hover {
-        color:#f1f1f1;
-        }
-    .main {
-        font-size:1vw;
-        padding:0px 10px;
-        }
-/* ----------------------------- */
-/* Top navigation. */
-    .top_nav {
-        display: flex;
-        width: 100vw;
-        height: 15vh;
-        font-family: "Lucida Console";
-        justify-content: space-around;
-        align-items:center;
-        
     }
 /* ----------------------------- */
 /* The Modal */
@@ -165,32 +144,34 @@
 </style>
     
     <div class="top_nav">
-        <a class="hover" href="https://www.christopherharshfield.com/">Home</a>
+        <b>CHRISTOPHER HARSHFIELD</b>
+        <a class="nav_font" href="../index.html">Home</a>
+        <a class="nav_font" href="/portfolio.html">Portfolio</a>
+        <a class="nav_font" href="/contact.html">Contact</a>
     </div>
     
 <body>
-    
-<!-- images that refresh on (<)(>) button click -->    
-<button class="hover" id="BtnMinus"><</button>
-<img class="modal_hover" id="imgIDleft" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true">
-<img id="imgIDright" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true">
-<button class="hover" id="BtnPlus">></button>
-    
-<!-- modal -->    
-<div id="modal_window" class="modal_style"> 
-    
-    <!--// Modal image to refresh.-->
-    <span class="close" id="span_close">&times;</span>
-    <div class="row">
-        <div class="column">
-            <!--Left - modal video to refresh/show/hide.-->
-            <video id="video_div" controls autoplay loop preload width="720" height="720">
-                <source id="video_modal_ID" src="video/pullpushrepeat-UPmp4.mp4" type="video/mp4">
-            </video>  
-            <!--Left - modal image to refresh/show/hide.-->
-            <img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true">
+    <!-- images that refresh on (<)(>) button click -->    
+    <button class="hover" id="BtnMinus"><</button>
+    <img class="modal_hover" id="imgIDleft" src="https://github.com/cphars01/cphars01.github.io/blob/main/artworks/1_odalisque.png?raw=true">
+    <img id="imgIDright" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/website%20titles/1-odalisque.jpg?raw=true">
+    <button class="hover" id="BtnPlus">></button>
+
+    <!-- modal -->    
+    <div id="modal_window" class="modal_style"> 
+
+        <!--// Modal image to refresh.-->
+        <span class="close" id="span_close">&times;</span>
+        <div class="row">
+            <div class="column">
+                <!--Left - modal video to refresh/show/hide.-->
+                <video id="video_div" controls autoplay loop preload width="720" height="720">
+                    <source id="video_modal_ID" src="video/pullpushrepeat-UPmp4.mp4" type="video/mp4">
+                </video>  
+                <!--Left - modal image to refresh/show/hide.-->
+                <img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true">
+            </div>
         </div>
-    </div>
 </div>
 
 <script> <!-- ------------------------------------------------------------------------------------------------------------------------- -->  
