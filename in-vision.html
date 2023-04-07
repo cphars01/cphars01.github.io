@@ -10,7 +10,9 @@
         background-color: white;
         }
     img{
-        padding-left: 5vw;
+        padding-top: 5vh;
+        height:60vh;
+        width: auto;
         }
 
 /* ----------------------------- */
@@ -68,12 +70,10 @@
         display: none; 
         position: fixed; 
         z-index: 100; 
-        padding-top: 1px; 
         left: 0;
         top: 0;
         width: 100%; 
         height: 100%; 
-        overflow: scroll; 
         background-color: rgb(0,0,0); 
         background-color: rgba(255,255,255,.95); 
         /*opacity:90%;*/
@@ -121,23 +121,6 @@
     justify-content: flex-start;
     overflow-y: auto;
     }
-/*.left {
-    position: relative;
-    width: 30vw;
-    height: 70vh;
-    background-color: red;
-    display: flex;
-    margin-right:100px;
-    }
-.right {
-    position: relative;
-    display: flex;
-    width: 30vw;
-    height: 70vh;
-    background-color: green;
-    margin-left:100px;
-    }*/ 
-    
 }
 </style>  
 
@@ -148,6 +131,7 @@
         <a  class="hover" href="../index.html" style="text-decoration:none">Home</a>
         <a  class="hover" href="/gallery.html" style="text-decoration:none">Senior Exhibition</a>
         <a  class="hover" href="/in-vision.html" style="text-decoration:none">In Vision</a>
+        <a  class="hover" href="/other.html" style="text-decoration:none">Misc</a>
         <a  class="hover" href="/contact.html" style="text-decoration:none">Contact</a>
         </div>
 </div>
@@ -155,20 +139,80 @@
 <!-- Page Content!!! --> 
 <body>  
     <div class="div_container">
-        <img class="modal_hover" id="imgIDleft" src="other-work/ooze.png">
-        <img class="modal_hover" id="imgIDleft" src="other-work/flame.png">  
-        <img class="modal_hover" id="imgIDleft" src="other-work/fallen.png">  
-        <img class="modal_hover" id="imgIDleft" src="other-work/sun.png">  
-        <img class="modal_hover" id="imgIDleft" src="other-work/water.png">    
+        <img class="modal_hover" id="imgID1" src="other-work/ooze.png">
+        <img class="modal_hover" id="imgID2" src="other-work/flame.png">  
+        <img class="modal_hover" id="imgID3" src="other-work/fallen.png">  
+        <img class="modal_hover" id="imgID4" src="other-work/sun.png">  
+        <img class="modal_hover" id="imgID5" src="other-work/water.png">    
     </div>
 
-
+<!-- modal -->    
+<div id="modal_window" class="modal_style"> 
+    <span class="close" id="span_close">&times;</span>
+    <!--// Modal image to refresh.-->
+    <img id="img_modal_ID" class="img_modal_ID" src="other-work/ooze.png">
+</div>
 
 <!-- End of page content !!! bottom break + container -->
-    <hr>
-        <!-- button container only for standardized spacing. -->  
-    <div class="button_container">
-    </div>   
-</body>   
+<hr>
+</body>  
+<!-- button container only for standardized spacing. -->  
+<div class="button_container">
+</div>   
+    
+ 
 
+<script>
+    // Choosing which image to show in modal.    
+    var counter = 1;
+    // Image to refresh with function.
+    const modal_img = document.getElementById("img_modal_ID");
+    
+    const button1 = document.getElementById("imgID1");
+    const button2 = document.getElementById("imgID2");
+    const button3 = document.getElementById("imgID3");
+    const button4 = document.getElementById("imgID4");
+    const button5 = document.getElementById("imgID5");
+
+// Get the modal.
+const modal = document.getElementById("modal_window"); 
+
+button1.addEventListener("click",() => {
+    var current = 1;
+    modal_img.src="other-work/ooze.png";
+    modal.style.display = "block";
+    });   
+button2.addEventListener("click",() => {
+    var current = 2;
+    modal_img.src="other-work/flame.png";
+    modal.style.display = "block";
+    });   
+button3.addEventListener("click",() => {
+    var current = 3;
+    modal_img.src="other-work/fallen.png";
+    modal.style.display = "block";
+    });   
+button4.addEventListener("click",() => {
+    var current = 4;
+    modal_img.src="other-work/sun.png";
+    modal.style.display = "block";
+    });   
+button5.addEventListener("click",() => {
+    var current = 5;
+    modal_img.src="other-work/water.png";
+    modal.style.display = "block";
+    });   
+    
+// When the user clicks on <span> (x), close the modal
+span_close.onclick = function() {
+    modal.style.display = "none";
+    }   
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        }
+    }
+</script>
+    
 </html>
