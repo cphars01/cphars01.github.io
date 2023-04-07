@@ -2,24 +2,106 @@
     
 <style>
     body{
-        font-family: "Lucida Console", "Courier New", monospace;
-        display:flex;
+        font-family: "Lucida Console";
+        display:block;
         text-align:center;
-        align-items:center;
+        align-items:flex-start;
         justify-content:center;
+        }
+    img{
+        margin-right:10px;
+        margin-left:10px;
+        min-width:10vw;
+        min-height:10vh;
+        max-height:70vh;
+        }
+
+/* ----------------------------- */
+/* Top navigation. */
+    .top_nav{
+        display: block;
+        width: 100vw;
+        height: 1vh;
+        padding-top: 10vh;
+        }
+    .text_flex{
+        display:flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        }
+    .nav_text{
+        text-decoration:none;
         font-size: 1em;
+        color:black;
+        font-weight:lighter;
+        padding: 5vw;
+        }
+    a:link {color:#000000;}    
+    a:visited {color:#000000;} 
+    a:hover {color:#000000;}   
+    a:active {color:#FFFF00;}  
+/* Button, hover, and button div. */   
+    button {
+        display: block;
+        align-items: center;
+        padding-right:10px;
+        padding-left:10px;
+        width:2vw;
+        height:2vw;
+        font-size:1vw;
         color: black;
+        border: solid;
+        border-color: gray;
+        border-width: thin;
+        transition-duration: 0.1s;
+        z-index:2;
+        cursor:pointer;
+        }  
+    .hover:hover {
+        background-color: #FFFF00;
+        }
+    .button_container{
+        padding-top: 3vh;
+        display:flex;
+        align-content: center;
+        justify-content: space-evenly;
+    }
+/* email div. */  
+    email_container{
+        display: block;
+        height: 40vh;
+        width: 100vw;
+        text-align:center;
+        align-items:flex-start;
+        justify-content:center;
+        padding-bottom: 10vh
+        
     }
 </style>  
-<body>   
-<!-- left side navigation
-<div class="sidenavL">
-    <a class="hover" href="https://www.christopherharshfield.com/">Home</a>
-    <a class="hover" href="#services">Statement</a>
-    <a class="hover" href="#clients">Gallery</a>
-    <a class="hover" href="/contact.html">Contact</a>
-</div> --> 
-email: cphars01@gmail.com
+
+<!-- Top Navigation --> 
+<div class="top_nav">
+    <div class="text_flex">
+        <b>CHRISTOPHER HARSHFIELD</b>
+        <a  class="hover" href="../index.html" style="text-decoration:none">Home</a>
+        <a  class="hover" href="/gallery.html" style="text-decoration:none">Senior Exhibition</a>
+        <a  class="hover" href="/portfolio.html" style="text-decoration:none">Other Work</a>
+        <a  class="hover" href="/contact.html" style="text-decoration:none">Contact</a>
+        </div>
+</div>
+<hr>   
+
+<body>  
+    <img src="digi-images/email_address.png?raw=true">
+
+
+    <!-- bottom break + container -->
+    <hr>
+        <!-- left right buttons -->  
+    <div class="button_container">
+        <button class="hover" id="BtnMinus">-</button>
+        <button class="hover" id="BtnPlus">+</button>
+    </div>   
 </body>   
-    
+
 </html>
