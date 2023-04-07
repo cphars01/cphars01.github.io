@@ -7,8 +7,9 @@
         text-align:center;
         align-items:flex-start;
         justify-content:center;
+        background-color: white;
         }
-    img{
+ /*   img{
         margin-right:10px;
         margin-left:10px;
         min-width:10vw;
@@ -78,6 +79,47 @@
         padding-bottom: 10vh
         
     }
+/* div containers for formatting. */ 
+.div_container {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 70vh;
+    align-content: center;
+    justify-content: center;
+    }
+.left {
+    position: relative;
+    width: 30vw;
+    height: 70vh;
+    background-color: red;
+    display: flex;
+    margin-right:100px;
+    }
+.right {
+    position: relative;
+    display: flex;
+    width: 30vw;
+    height: 70vh;
+    background-color: green;
+    margin-left:100px;
+    }
+/* image gallery grid, right side. */ 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.grid img {
+  width: 100%;
+}
+    
+    
+    
+    
+}
 </style>  
 
 <!-- Top Navigation --> 
@@ -93,7 +135,29 @@
 <hr>   
 <!-- Page Content!!! --> 
 <body>  
-    <img src="digi-images/email_address.png?raw=true">
+  <div class="div_container">
+    <div class="left">
+    <!-- Current work being shown; updated image. --> 
+    </div>
+    
+    <div class="right">
+        <div class="grid">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+          <img src="https://via.placeholder.com/400x300.jpg">
+        </div>
+    </div>
+</div>
+
 
 
 <!-- End of page content !!! bottom break + container -->
