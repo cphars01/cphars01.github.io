@@ -257,7 +257,6 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
-        document.getElementById("remainingTime").style.display = "none";
 
         //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";
@@ -272,7 +271,6 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("remainingTime").style.display = "none";
         
         //Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/pullpushrepeat-UPmp4.mp4";
@@ -286,7 +284,6 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
-        document.getElementById("remainingTime").style.display = "none";
   
         // Modal: Get new image.
         modal_img.src="digi-images/ataraxia-censored.png?raw=true";          
@@ -300,7 +297,6 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("remainingTime").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/death_drive.mp4";
@@ -315,7 +311,6 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("remainingTime").style.display = "none";
   
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/eternal_flame_UP.mp4";
@@ -330,8 +325,7 @@ function refresh_image(){
         // Modal: Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("remainingTime").style.display = "none";
-
+        
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/dungeon_crawling_UP.mp4";    
         } 
@@ -344,13 +338,13 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
-        document.getElementById("remainingTime").style.display = "block";
       
         // Modal: Get new image.
         modal_img.src="digi-images/hands-modal-SMALL.png?raw=true";       
         }
     video_div.load();
     }    
+    
 button_minus.addEventListener("click",() => {
     counter = (counter + 7 - 1) % 7;
     console.log("Counter = " + counter.toString())
