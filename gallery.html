@@ -21,8 +21,6 @@
     button {
         display: block;
         align-items: center;
-        padding-right:10px;
-        padding-left:10px;
         width:2vw;
         height:2vw;
         font-size:1vw;
@@ -159,14 +157,12 @@
 
 /* ----------------------------- */
 /* Timer */
-#demo {
-  background: #333;
-  font-family: "Lucida Console";
-  text-align: center;
-  color: #eee;
-  text-shadow: 1px 1px 5px black;
-  padding: 1rem 0;
-  font-size: 3rem;
+#timer {
+  display: block;
+        align-items: center;
+    font-family: "Lucida Console";
+    text-align: center;
+    padding-top: 10px;
 }
    
 </style>
@@ -209,13 +205,20 @@
 </div>
     <!-- bottom break + container -->
     <hr>
-        <!-- left right buttons -->  
+    <!-- left button -->  
     <div class="button_container">
-        <button class="hover" id="BtnMinus">-</button>
-                        <div id="demo">
-                    <p></p>
-                </div>
-        <button class="hover" id="BtnPlus">+</button>
+        <button class="hover" id="BtnMinus">-</button> 
+    <!-- timer -->  
+    <section id="timer">
+        <div class="timer-container">
+            <span id="days" role="timer"></span>
+            <span id="hours" role="timer"></span>
+            <span id="minutes" role="timer"></span>
+            <span id="seconds" role="timer"></span>
+        </div>
+    </section>
+    <!-- right button -->
+    <button class="hover" id="BtnPlus">+</button>
     </div>
 </body>  
 
@@ -254,7 +257,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
-        document.getElementById("demo").style.display = "none";
+        document.getElementById("remainingTime").style.display = "none";
 
         //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";
@@ -269,7 +272,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("demo").style.display = "none";
+        document.getElementById("remainingTime").style.display = "none";
         
         //Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/pullpushrepeat-UPmp4.mp4";
@@ -283,7 +286,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
-        document.getElementById("demo").style.display = "none";
+        document.getElementById("remainingTime").style.display = "none";
   
         // Modal: Get new image.
         modal_img.src="digi-images/ataraxia-censored.png?raw=true";          
@@ -297,7 +300,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("demo").style.display = "none";
+        document.getElementById("remainingTime").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/death_drive.mp4";
@@ -312,7 +315,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("demo").style.display = "none";
+        document.getElementById("remainingTime").style.display = "none";
   
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/eternal_flame_UP.mp4";
@@ -327,7 +330,7 @@ function refresh_image(){
         // Modal: Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
-        document.getElementById("demo").style.display = "none";
+        document.getElementById("remainingTime").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/dungeon_crawling_UP.mp4";    
@@ -341,7 +344,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
-        document.getElementById("demo").style.display = "block";
+        document.getElementById("remainingTime").style.display = "block";
       
         // Modal: Get new image.
         modal_img.src="digi-images/hands-modal-SMALL.png?raw=true";       
@@ -374,19 +377,47 @@ window.onclick = function(event) {
 
 
 // TIMER
-setInterval(function time(){
-  var d = new Date();
-  var hours = 24 - d.getHours();
-  var min = 60 - d.getMinutes();
-  if((min + '').length == 1){
-    min = '0' + min;
-  }
-  var sec = 60 - d.getSeconds();
-  if((sec + '').length == 1){
-        sec = '0' + sec;
-  }
-  jQuery('#demo p').html(hours+':'+min+':'+sec)
-}, 1000);
+let countdownDate = new Date().setSeconds(new Date().getSeconds() + 86400);
+
+let timerInterval;
+
+const daysElem = document.getElementById("days"),
+  hoursElem = document.getElementById("hours"),
+  minutesElem = document.getElementById("minutes"),
+  secondsElem = document.getElementById("seconds"),
+  timer = document.getElementById("timer"),
+  content = document.getElementById("content");
+
+const formatTime = (time, string) => {
+    if (time > 9){
+        return time == 1 ? `${time} ${string}` : `${time} ${string}`;
+        }
+    else {
+        return time == 1 ? `${time} ${string}` : `0${time} ${string}`;
+    }
+
+};
+
+const startCountdown = () => {
+  const now = new Date().getTime();
+  const countdown = new Date(countdownDate).getTime();
+
+  const difference = (countdown - now) / 1000;
+
+  let days = Math.floor(difference / (60 * 60 * 24));
+  let hours = Math.floor((difference % (60 * 60 * 24)) / (60 * 60));
+  let minutes = Math.floor((difference % (60 * 60)) / 60);
+  let seconds = Math.floor(difference % 60);
+
+  hoursElem.innerHTML = formatTime(hours, ":");
+  minutesElem.innerHTML = formatTime(minutes, ":");
+  secondsElem.innerHTML = formatTime(seconds, "");
+};
+
+window.addEventListener("load", () => {
+  startCountdown();
+  timerInterval = setInterval(startCountdown, 1000);
+});
 
 </script>
 
