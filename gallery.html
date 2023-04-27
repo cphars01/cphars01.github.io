@@ -156,7 +156,19 @@
         padding-right: 10px;
         flex: 100%;
         }
-    
+
+/* ----------------------------- */
+/* Timer */
+#demo {
+  background: #333;
+  font-family: "Lucida Console";
+  text-align: center;
+  color: #eee;
+  text-shadow: 1px 1px 5px black;
+  padding: 1rem 0;
+  font-size: 3rem;
+}
+   
 </style>
 <!-- END STYLE --> 
     
@@ -200,6 +212,9 @@
         <!-- left right buttons -->  
     <div class="button_container">
         <button class="hover" id="BtnMinus">-</button>
+                        <div id="demo">
+                    <p></p>
+                </div>
         <button class="hover" id="BtnPlus">+</button>
     </div>
 </body>  
@@ -239,6 +254,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("demo").style.display = "none";
 
         //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";
@@ -253,6 +269,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("demo").style.display = "none";
         
         //Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/pullpushrepeat-UPmp4.mp4";
@@ -266,6 +283,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("demo").style.display = "none";
   
         // Modal: Get new image.
         modal_img.src="digi-images/ataraxia-censored.png?raw=true";          
@@ -279,6 +297,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("demo").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/death_drive.mp4";
@@ -293,6 +312,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("demo").style.display = "none";
   
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/eternal_flame_UP.mp4";
@@ -307,6 +327,7 @@ function refresh_image(){
         // Modal: Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("demo").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/dungeon_crawling_UP.mp4";    
@@ -320,6 +341,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("demo").style.display = "block";
       
         // Modal: Get new image.
         modal_img.src="digi-images/hands-modal-SMALL.png?raw=true";       
@@ -338,7 +360,7 @@ button_plus.addEventListener("click",() => {
 imgL.addEventListener("click",() => {
     modal.style.display = "block";
     });
-<!-- ------------------------------------------------------------------------------------------------------------------------- -->  
+
 // When the user clicks on <span> (x), close the modal
 span_close.onclick = function() {
     modal.style.display = "none";
@@ -349,6 +371,23 @@ window.onclick = function(event) {
         modal.style.display = "none";
         }
     }
+
+
+// TIMER
+setInterval(function time(){
+  var d = new Date();
+  var hours = 24 - d.getHours();
+  var min = 60 - d.getMinutes();
+  if((min + '').length == 1){
+    min = '0' + min;
+  }
+  var sec = 60 - d.getSeconds();
+  if((sec + '').length == 1){
+        sec = '0' + sec;
+  }
+  jQuery('#demo p').html(hours+':'+min+':'+sec)
+}, 1000);
+
 </script>
 
 </html>
