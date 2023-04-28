@@ -2,6 +2,7 @@
 <head>
 </head>  
 <style>
+ /* ----------------------------- */
     body{
         font-family: "Lucida Console";
         display:block;
@@ -158,13 +159,13 @@
 /* ----------------------------- */
 /* Timer */
 #timer {
-  display: block;
-        align-items: center;
+    display: block;
+    align-items: center;
     font-family: "Lucida Console";
     text-align: center;
     padding-top: 10px;
 }
-   
+/* ----------------------------- */   
 </style>
 <!-- END STYLE --> 
     
@@ -203,20 +204,28 @@
 </div>
     <!-- bottom break + container -->
     <hr>
+    
     <!-- left button -->  
     <div class="button_container">
+        
+        <div></div><div></div><div></div><div></div>
+        
         <button class="hover" id="BtnMinus">-</button> 
-    <!-- timer -->  
-    <section id="timer">
-        <div class="timer-container">
-            <span id="days" role="timer"></span>
-            <span id="hours" role="timer"></span>
-            <span id="minutes" role="timer"></span>
-            <span id="seconds" role="timer"></span>
-        </div>
-    </section>
+        <!-- timer -->  
+        <section id="timer">
+            <div class="timer-container">
+                <span id="days" role="timer"></span>
+                <span id="hours" role="timer"></span>
+                <span id="minutes" role="timer"></span>
+                <span id="seconds" role="timer"></span>
+            </div>
+        </section>
+        
     <!-- right button -->
     <button class="hover" id="BtnPlus">+</button>
+        
+    <div></div><div></div><div></div><div></div>
+        
     </div>
 </body>  
 
