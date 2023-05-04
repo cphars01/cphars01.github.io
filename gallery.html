@@ -109,7 +109,7 @@
         min-height: 90vh;
         max-height: 90vh;
         width: auto;
-        margin: auto;
+        margin-left: auto;
         display: block;
         z-index: 3;
         }
@@ -158,12 +158,16 @@
 
 /* ----------------------------- */
 /* Timer */
-#timer {
-    display: block;
-    align-items: center;
+#timer_style {
+    position: absolute;
     font-family: "Lucida Console";
     text-align: center;
-    padding-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    top: 47vh;
+    left: 45.8vw;
 }
 /* ----------------------------- */   
 </style>
@@ -188,19 +192,36 @@
 
     <!-- modal -->    
     <div id="modal_window" class="modal_style"> 
-
-        <!--// Modal image to refresh.-->
         <span class="close" id="span_close">&times;</span>
         <div class="row">
             <div class="column">
+
                 <!--Left - modal video to refresh/show/hide.-->
                 <video id="video_div" controls autoplay loop preload width="720" height="720">
                     <source id="video_modal_ID" src="video/pullpushrepeat-UPmp4.mp4" type="video/mp4">
-                </video>  
+                </video> 
+
                 <!--Left - modal image to refresh/show/hide.-->
                 <img id="img_modal_ID" class="img_modal_ID" src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true">
+                
+                <!-- timer -->  
+                <section id="timer">
+
+                                            <img src="digi-images/hands-modal-scaled.png?raw=true">
+                    <div id="timer_style">
+                        <span id="days" role="timer"></span>
+                        <span id="hours" role="timer"></span>
+                        <span id="minutes" role="timer"></span>
+                        <span id="seconds" role="timer"></span>
+
+                </div>
+                </section>
+                
             </div>
         </div>
+                        
+
+                
 </div>
     <!-- bottom break + container -->
     <hr>
@@ -211,15 +232,8 @@
         <div></div><div></div><div></div><div></div>
         
         <button class="hover" id="BtnMinus">-</button> 
-        <!-- timer -->  
-        <section id="timer">
-            <div class="timer-container">
-                <span id="days" role="timer"></span>
-                <span id="hours" role="timer"></span>
-                <span id="minutes" role="timer"></span>
-                <span id="seconds" role="timer"></span>
-            </div>
-        </section>
+        
+
         
     <!-- right button -->
     <button class="hover" id="BtnPlus">+</button>
@@ -251,6 +265,9 @@ const span_close = document.getElementById("span_close");
 
 // Prehide video to refresh.
 document.getElementById("video_div").style.display = "none";
+
+// Prehide timer to refresh.
+document.getElementById("timer").style.display = "none";
     
 // Refreshes L and R images + modal image/video.
 function refresh_image(){  
@@ -264,6 +281,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("timer").style.display = "none";
 
         //Get new image.
         modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/oda-with-frame.png?raw=true";
@@ -278,6 +296,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("timer").style.display = "none";
         
         //Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/pullpushrepeat-UPmp4.mp4";
@@ -291,6 +310,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
         document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("timer").style.display = "none";
   
         // Modal: Get new image.
         modal_img.src="digi-images/ataraxia-censored.png?raw=true";          
@@ -304,6 +324,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("timer").style.display = "none";
 
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/death_drive.mp4";
@@ -318,6 +339,7 @@ function refresh_image(){
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("timer").style.display = "none";
   
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/eternal_flame_UP.mp4";
@@ -332,6 +354,7 @@ function refresh_image(){
         // Modal: Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "block";
         document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("timer").style.display = "none";
         
         // Modal: Get new video.
         document.getElementById("video_modal_ID").src = "video/dungeon_crawling_UP.mp4";    
@@ -344,7 +367,8 @@ function refresh_image(){
 
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
-        document.getElementById("img_modal_ID").style.display = "block";
+        document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("timer").style.display = "block";
       
         // Modal: Get new image.
         modal_img.src="digi-images/hands-modal-scaled.png?raw=true";       
