@@ -166,7 +166,7 @@
     font-weight: bold;
     font-size: 1vw;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    top: 47vh;
+    top: 23vh;
     left: 45.8vw;
 }
 /* ----------------------------- */   
@@ -367,11 +367,11 @@ function refresh_image(){
 
         // Show or hide whether image/video, depending on artwork.
         document.getElementById("video_div").style.display = "none";
-        document.getElementById("img_modal_ID").style.display = "none";
+        document.getElementById("img_modal_ID").style.display = "block";
         document.getElementById("timer").style.display = "block";
       
         // Modal: Get new image.
-        modal_img.src="https://github.com/cphars01/cphars01.github.io/blob/main/digi-images/maze-only.png?raw=true";       
+        modal_img.src="digi-images/maze-only.png?raw=true";       
         }
     video_div.load();
     }    
